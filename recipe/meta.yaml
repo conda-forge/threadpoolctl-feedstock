@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: threadpoolctl
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/joblib/threadpoolctl/archive/{{ version }}.tar.gz
-  sha256: 314ef000fb78883c653a5644ffd202ffda8b874006c6bbe90de0db7db08ff9f3
+  sha256: c61876ccd453f10c964d161272cbae165c2233cc5323ce0c3f544d8b8335fb9c
 
 build:
   number: 0
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - flit
   run:
-    - python >=3.5
+    - python >=3.6
 
 test:
   requires:
@@ -31,10 +31,10 @@ test:
 
 about:
   home: https://github.com/joblib/threadpoolctl
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Python helpers to control the threadpools of native libraries'
+  summary: Python helpers to control the threadpools of native libraries
 
   description: |
     Python helpers to introspect and limit the number of threads used
