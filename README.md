@@ -3,7 +3,7 @@ About threadpoolctl
 
 Home: https://github.com/joblib/threadpoolctl
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/threadpoolctl-feedstock/blob/master/LICENSE.txt)
 
