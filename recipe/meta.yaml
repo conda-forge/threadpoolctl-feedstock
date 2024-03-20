@@ -1,4 +1,4 @@
-{% set version = "3.3.0" %}
+{% set version = "3.4.0" %}
 
 package:
   name: threadpoolctl
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/joblib/threadpoolctl/archive/{{ version }}.tar.gz
-  sha256: 8ba449778acf0be86d2d87c0a4caee35c4c360afb8d7cbd994321c7cab11ac88
+  sha256: 1e41d84d443f27315566c4928bd0efa05abd38503031b05b3d3441e8945915f0
 
 build:
   number: 0
