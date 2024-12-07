@@ -9,21 +9,22 @@ source:
   sha256: 3d941a397b35d15522d095173d06adeadc1d95f81f63b35e078e77b2d7c80401
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - {{ PYTHON }} -m flit install
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - flit
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   requires:
     - numpy
+    - python {{ python_min }}
   imports:
     - threadpoolctl
   commands:
