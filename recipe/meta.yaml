@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - flit
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   requires:
