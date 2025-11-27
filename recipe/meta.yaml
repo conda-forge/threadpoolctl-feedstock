@@ -9,8 +9,8 @@ source:
   sha256: 3d941a397b35d15522d095173d06adeadc1d95f81f63b35e078e77b2d7c80401
 
 build:
-  skip: True  # [py<38]
-  number: 0
+  skip: true  # [py<38]
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -24,8 +24,7 @@ requirements:
     - blas=*=openblas  # [osx and x86_64]
 
 test:
-  source_files:
-    tests
+  source_files: tests
   requires:
     - pip
     - numpy
@@ -35,11 +34,10 @@ test:
   commands:
     - pip check
     - python -m threadpoolctl -i numpy
-
-    - pytest -v tests                              # [not (aarch64 or s390x)]
+    - pytest -v tests  # [not (aarch64 or s390x)]
     # linux-aarch64 (neoversen1) and s390x (z14) are unrecognized
     # architectures on Prefect.  linux-aarch64 (m1) is perfectly OK.
-    - pytest -v tests -k 'not test_architecture'   # [aarch64 or s390x]
+    - pytest -v tests -k 'not test_architecture'  # [aarch64 or s390x]
 
 about:
   home: https://github.com/joblib/threadpoolctl
